@@ -48,7 +48,6 @@ $InetPubWWWRoot = "C:\Inetpub\WWWRoot"
 
 # Enter the load balancer URL for the IaaS Web Service only to configure the 
 # DisableStrictNameChecking and BackConnectionHostNames to prevent HTTP 401.1 errors
-# Added by Sam McGeown (@sammcgeown)
 #$loadbalancerUrl = ""
 
 # ------------- Dot Net 4.5.2 -------------
