@@ -513,7 +513,7 @@ if (dir "HKLM:\SOFTWARE\JavaSoft\Java Runtime Environment" -ErrorAction Silently
 		} Until ($javamenuoption -eq "1" -or $javamenuoption -eq "2" -or $javamenuoption -eq "3")}
 			Switch ($javamenuoption){
 			"1" {
-				if (($javalocalpath -eq "") -or (Test-Path -Path "$javalocalpath" -ErrorAction SilentlyContinue -eq $false)) {
+				if (($javalocalpath -eq "") -or ((Test-Path -Path "$javalocalpath" -ErrorAction SilentlyContinue) -eq $false)) {
 					do {
 						$javalocalpath = Read-Host -Prompt "Unable to locate file. Where is the Java installer located locally? (example c:\temp\jre71.exe)"
 					} while ((Test-path -Path $javalocalpath -ErrorAction SilentlyContinue) -eq $false)}
